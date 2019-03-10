@@ -1,0 +1,233 @@
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="footprint.js"></script>
+</head>
+<body>
+	<div class="container" style="text-align:center;">
+		<h1>Calculadora de pegada de carbono</h1>
+	</div>
+	<br>
+	<div id="people" class="container row" style="text-align: center; margin: auto;">
+		<div class="col-4">
+			<p>Quantas pessoas moram na sua casa?</p>
+			<br>
+			<select>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 ou mais</option>
+			</select>
+		</div>
+		<div class="col-4">
+			<p>Quantos quartos?</p>
+			<br>
+			<select>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 ou mais</option>
+			</select>
+		</div>
+		<div class="col-4">
+			<p>Quantos banheiros?</p>
+			<br>
+			<select>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 ou mais</option>
+			</select>
+		</div>
+		<div style="position: fixed; top: 50vh; right: 2%; text-align: right;">
+			<a onclick="showDiv('people', 'electricity', 'block')">
+				<i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size:40px;"></i>
+			</a>
+		</div>
+	</div>
+
+	<div id="electricity" style="text-align: center; display: none;">
+		<div class="container row" style="margin: auto;">
+			<div class="col-2">
+				<p>Quantas TVs?</p>
+				<br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-2">
+				<p>Quantos celulares?</p>
+				<br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-2">
+				<p>Quantos computadores?</p>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-2">
+				<p>Quantos video games?</p>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-2">
+				<p>Quantas geladeiras?</p>
+				<br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-2">
+				<p>Quantas máquinas de café?</p>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="container row" style="margin: auto;">
+			<div class="col-3">
+				<p>Quantos microondas e fogões elétricos?</p>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-3">
+				<p>Quantos secadores de cabelo?</p>
+				<br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-3">
+				<p>Quantos ares-condicionados e ventiladores?</p>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-3">
+				<p>Quantos chuveiros e banheiras?</p>
+				<br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="container row" style="margin: auto;">
+			<div class="col-3">
+				<p>Quantas máquinas de lavar/ secar roupa?</p>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-3">
+				<p>Quantas máquinas de lavar louça?</p>
+				<br>
+				<select>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5 ou mais</option>
+				</select>
+			</div>
+			<div class="col-3">
+				<p>Possui fogão a gás?</p>
+				<br>
+				<select>
+					<option value="0">Não</option>
+					<option value="1">Sim, 1</option>
+					<option value="2">Sim, 2 ou mais</option>
+				</select>
+			</div>
+			<div class="col-3">
+				<p>Tipo das lâmpadas?</p>
+				<br>
+				<select>
+					<option value="1">Incandescente</option>
+					<option value="2">Fluorescente</option>
+					<option value="3">LED</option>
+				</select>
+			</div>
+		</div>
+		<div style="position: fixed; top: 50vh; left: 2%; text-align: right;">
+			<a onclick="showDiv('electricity', 'people', 'flex')">
+				<i class="fa fa-arrow-circle-left" aria-hidden="true" style="font-size:40px;"></i>
+			</a>
+		</div>
+		<div style="position: fixed; top: 50vh; right: 2%; text-align: right;">
+			<a onclick="showDiv('people', 'electricity', 'block')">
+				<i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size:40px;"></i>
+			</a>
+		</div>
+	</div>
+
+	
+</body>
