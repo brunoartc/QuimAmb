@@ -5,12 +5,13 @@
 	<script src="footprint.js"></script>
 </head>
 <body>
-	<div class="container" style="text-align:center;">
+	<div class="" style="text-align:center; padding: 35px; background: #1abc9c; color: white; font-size: 30px;">
 		<h1>Calculadora de pegada de carbono</h1>
+		<h4 id="subtitle">Geral</h4>
 	</div>
 	<br>
 	<div id="people" class="container row" style="text-align: center; margin: auto;">
-		<div class="col-4">
+		<div class="col-6">
 			<p>Quantas pessoas moram na sua casa?</p>
 			<br>
 			<select>
@@ -21,8 +22,8 @@
 				<option value="5">5 ou mais</option>
 			</select>
 		</div>
-		<div class="col-4">
-			<p>Quantos quartos?</p>
+		<div class="col-6">
+			<p>Quantos cômodos?</p>
 			<br>
 			<select>
 				<option value="1">1</option>
@@ -32,7 +33,7 @@
 				<option value="5">5 ou mais</option>
 			</select>
 		</div>
-		<div class="col-4">
+<!-- 		<div class="col-4">
 			<p>Quantos banheiros?</p>
 			<br>
 			<select>
@@ -42,9 +43,9 @@
 				<option value="4">4</option>
 				<option value="5">5 ou mais</option>
 			</select>
-		</div>
+		</div> -->
 		<div style="position: fixed; top: 50vh; right: 2%; text-align: right;">
-			<a onclick="showDiv('people', 'electricity', 'block')">
+			<a onclick="showDiv('people', 'electricity', 'block', 'Eletricidade')">
 				<i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size:40px;"></i>
 			</a>
 		</div>
@@ -149,7 +150,8 @@
 				</select>
 			</div>
 			<div class="col-3">
-				<p>Quantos ares-condicionados e ventiladores?</p>
+				<p>Quantos ar-condicionados?</p>
+				<br>
 				<select>
 					<option value="0">0</option>
 					<option value="1">1</option>
@@ -160,7 +162,7 @@
 				</select>
 			</div>
 			<div class="col-3">
-				<p>Quantos chuveiros e banheiras?</p>
+				<p>Quantos chuveiros?</p>
 				<br>
 				<select>
 					<option value="0">0</option>
@@ -218,16 +220,54 @@
 			</div>
 		</div>
 		<div style="position: fixed; top: 50vh; left: 2%; text-align: right;">
-			<a onclick="showDiv('electricity', 'people', 'flex')">
+			<a onclick="showDiv('electricity', 'people', 'flex', 'Geral')">
 				<i class="fa fa-arrow-circle-left" aria-hidden="true" style="font-size:40px;"></i>
 			</a>
 		</div>
 		<div style="position: fixed; top: 50vh; right: 2%; text-align: right;">
-			<a onclick="showDiv('people', 'electricity', 'block')">
+			<a onclick="showDiv('electricity', 'transport', 'block', 'Transporte')">
 				<i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size:40px;"></i>
 			</a>
 		</div>
 	</div>
-
+	<div id="transport" class="container row" style="text-align: center; display: none; margin: auto;">
+		<div class="container row">
+			<div class="col-6">
+				<p>Meio de transporte mais utilizado?</p>
+				<br>
+				<select>
+					<option value="1">Carro</option>
+					<option value="2">Metro</option>
+					<option value="3">Bike</option>
+					<option value="4">A pé</option>
+					<option value="5">Ônibus</option>
+				</select>
+			</div>
+			<div class="col-6">
+				<p>Distância até o trabalho, escola ou faculadade?</p>
+				<br>
+				<select>
+					<option value="1">Menos do que 2km</option>
+					<option value="2">Entre 2 e 10km</option>
+					<option value="3">Entre 10 e 20km</option>
+					<option value="4">Entre 20 e 30km</option>
+					<option value="5">Mais do que 30km</option>
+				</select>
+			</div>
+		</div>
+		<div style="position: fixed; top: 50vh; left: 2%; text-align: right;">
+			<a onclick="showDiv('transport', 'electricity', 'block', 'Eletricidade')">
+				<i class="fa fa-arrow-circle-left" aria-hidden="true" style="font-size:40px;"></i>
+			</a>
+		</div>
+		<div style="position: fixed; top: 50vh; right: 2%; text-align: right;">
+			<a onclick="showDiv('transport', 'result', 'block', 'Resultado')">
+				<i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size:40px;"></i>
+			</a>
+		</div>
+	</div>
+	<div id="result" class="container row" style="text-align: center; display: none; margin: auto;">
+		<h1>Sua pegada de carbono é:</h1>
+	</div>
 	
 </body>

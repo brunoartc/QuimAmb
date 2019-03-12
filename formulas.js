@@ -27,8 +27,6 @@ function LGasolinaCO2(litros) {
 
   addTotalG(GCO2);
   return GCO2;
-
-
 }
 
 function LetanolCO2(litros) {
