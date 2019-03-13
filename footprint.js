@@ -20,18 +20,56 @@ function calculate(){
 	const shower =  document.getElementById("shower").value;
 	const washer =  document.getElementById("washer").value;
 	const dryer =  document.getElementById("dryer").value;
-	const stoves =  document.getElementById("stoves").value;
+	//const stoves =  document.getElementById("stoves").value;
 	const lamps =  document.getElementById("lamps").value;
-	const transportation =  document.getElementById("transportation").value;
+	const transport =  document.getElementById("transportation").value;
 	const distance =  document.getElementById("distance").value;
-	const electricity;
+	const plane =  document.getElementById("plane").value;
+	const hoursOfLight = 3;
+	let electricity = 0;
 
-	electricity += funCo2(120, 20, people);
+	
 
+	electricity += funCo2(120, TVs, people);
+	electricity += funCo2(9.62, phones, people);
+	electricity += funCo2(90, computers, people);
+	electricity += funCo2(600, oven, people);
+	electricity += funCo2(500, cofee, people);
+	electricity += funCo2(1400, microwave, people);
+	electricity += funCo2(1200, hair, people);
+	electricity += funCo2(1200, air, people);
+	electricity += funCo2(4800, shower, people);
+	electricity += funCo2(1000, washer, people);
+	electricity += funCo2(4800, dryer, people);
+
+	if(lamps == 1){
+		electricity += funCo2(60 * rooms, hoursOfLight, people);
+	}
+	if(lamps == 2){
+		electricity += funCo2(15 * rooms, hoursOfLight, people);
+	}
+	if(lamps == 3){
+		electricity += funCo2(8 * rooms, hoursOfLight, people);
+	}
+
+	if(transport == 1){
+		electricity += LdiselCO2(8 * distance);
+	}
+	if(transport == 2){
+		electricity += LGasolinaCO2(3 * distance);
+	}
+	if(transport == 3){
+		electricity += LetanolCO2(4.2 * distance);
+	}
+
+	electricity += LqueroseneCO2(20/4 * plane, dryer, people);
+
+	electricity = Math.round(electricity/10) / 100;
+
+	console.log(electricity);
+	document.getElementById("answer").innerHTML = electricity + " kgCO2 por semana";
 
 }
-
-
 
 var g = 0;
 
