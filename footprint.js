@@ -28,7 +28,7 @@ function calculate(){
 	const hoursOfLight = 3;
 	let electricity = 0;
 
-	
+
 
 	electricity += funCo2(120, TVs, people);
 	electricity += funCo2(9.62, phones, people);
