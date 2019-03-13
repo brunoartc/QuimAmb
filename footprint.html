@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,28 +12,16 @@
 		<h4 id="subtitle">Geral</h4>
 	</div>
 	<br>
-	<div id="people" class="container row" style="text-align: center; margin: auto;">
+	<div id="geral" class="container row" style="text-align: center; margin: auto;">
 		<div class="col-6">
 			<p>Quantas pessoas moram na sua casa?</p>
 			<br>
-			<select>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5 ou mais</option>
-			</select>
+			<input type="number" id="people">
 		</div>
 		<div class="col-6">
 			<p>Quantos cômodos?</p>
 			<br>
-			<select>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5 ou mais</option>
-			</select>
+			<input type="number" id="rooms">
 		</div>
 <!-- 		<div class="col-4">
 			<p>Quantos banheiros?</p>
@@ -45,52 +35,32 @@
 			</select>
 		</div> -->
 		<div style="position: fixed; top: 50vh; right: 2%; text-align: right;">
-			<a onclick="showDiv('people', 'electricity', 'block', 'Eletricidade')">
+			<a onclick="showDiv('geral', 'electricity', 'block', 'Eletricidade')">
 				<i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size:40px;"></i>
 			</a>
 		</div>
 	</div>
 
 	<div id="electricity" style="text-align: center; display: none;">
+		<h4>Quantas horas por semana você dedica a esses aparelhos:</h4>
+		<br>
 		<div class="container row" style="margin: auto;">
-			<div class="col-2">
-				<p>Quantas TVs?</p>
-				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+			<div class="col-3">
+				<p>TV</p>
+				<input type="number" id="TVs" style="width: inherit;">
 			</div>
-			<div class="col-2">
-				<p>Quantos celulares?</p>
-				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+			<div class="col-3">
+				<p>Celular</p>
+				<input type="number" id="phones" style="width: inherit;">
 			</div>
-			<div class="col-2">
-				<p>Quantos computadores?</p>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+			<div class="col-3">
+				<p>Computador</p>
+				<input type="number" id="computers" style="width: inherit;">
 			</div>
-			<div class="col-2">
+			
+<!-- 			<div class="col-2">
 				<p>Quantos video games?</p>
-				<select>
+				<select id="games">
 					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -98,121 +68,67 @@
 					<option value="4">4</option>
 					<option value="5">5 ou mais</option>
 				</select>
-			</div>
-			<div class="col-2">
+			</div> -->
+			<!-- <div class="col-2">
 				<p>Quantas geladeiras?</p>
 				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
-			</div>
-			<div class="col-2">
-				<p>Quantas máquinas de café?</p>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+				<input type="number" id="fridges" style="width: inherit;">
+			</div> -->
+			<div class="col-3">
+				<p>Cafeteira</p>
+				<input type="number" id="cofee" style="width: inherit;">
 			</div>
 		</div>
 		<br>
 		<br>
 		<div class="container row" style="margin: auto;">
 			<div class="col-3">
-				<p>Quantos microondas e fogões elétricos?</p>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+				<p>Microondas</p>
+				<input type="number" id="microwave" style="width: inherit;">
 			</div>
 			<div class="col-3">
-				<p>Quantos secadores de cabelo?</p>
-				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+				<p>Forno elétrico</p>
+				<input type="number" id="oven" style="width: inherit;">
 			</div>
 			<div class="col-3">
-				<p>Quantos ar-condicionados?</p>
-				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+				<p>Secador de cabelo</p>
+				<input type="number" id="hair" style="width: inherit;">
 			</div>
 			<div class="col-3">
-				<p>Quantos chuveiros?</p>
-				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+				<p>Ar-condicionado</p>
+				<input type="number" id="air" style="width: inherit;">
 			</div>
+			
 		</div>
 		<br>
 		<br>
 		<div class="container row" style="margin: auto;">
 			<div class="col-3">
-				<p>Quantas máquinas de lavar/ secar roupa?</p>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
-			</div>
-			<div class="col-3">
-				<p>Quantas máquinas de lavar louça?</p>
+				<p>Chuveiro</p>
 				<br>
-				<select>
-					<option value="0">0</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5 ou mais</option>
-				</select>
+				<input type="number" id="shower" style="width: inherit;">
 			</div>
 			<div class="col-3">
+				<p>Lavadora de roupas (por ciclo semanal)</p>
+				<input type="number" id="washer" style="width: inherit;">
+			</div>
+			<div class="col-3">
+				<p>Secadora de roupas (por ciclo semanal)</p>
+				<input type="number" id="dryer" style="width: inherit;">
+			</div>
+			<!-- <div class="col-3">
 				<p>Possui fogão a gás?</p>
 				<br>
-				<select>
+				<select id="stoves">
 					<option value="0">Não</option>
 					<option value="1">Sim, 1</option>
 					<option value="2">Sim, 2 ou mais</option>
 				</select>
-			</div>
+			</div> -->
 			<div class="col-3">
 				<p>Tipo das lâmpadas?</p>
 				<br>
-				<select>
+				<select id="lamps">
 					<option value="1">Incandescente</option>
 					<option value="2">Fluorescente</option>
 					<option value="3">LED</option>
@@ -220,7 +136,7 @@
 			</div>
 		</div>
 		<div style="position: fixed; top: 50vh; left: 2%; text-align: right;">
-			<a onclick="showDiv('electricity', 'people', 'flex', 'Geral')">
+			<a onclick="showDiv('electricity', 'geral', 'flex', 'Geral')">
 				<i class="fa fa-arrow-circle-left" aria-hidden="true" style="font-size:40px;"></i>
 			</a>
 		</div>
@@ -235,7 +151,7 @@
 			<div class="col-6">
 				<p>Meio de transporte mais utilizado?</p>
 				<br>
-				<select>
+				<select id="transportation">
 					<option value="1">Carro</option>
 					<option value="2">Metro</option>
 					<option value="3">Bike</option>
@@ -244,15 +160,9 @@
 				</select>
 			</div>
 			<div class="col-6">
-				<p>Distância até o trabalho, escola ou faculadade?</p>
+				<p>Quantas horas diárias para o uso desse meio?</p>
 				<br>
-				<select>
-					<option value="1">Menos do que 2km</option>
-					<option value="2">Entre 2 e 10km</option>
-					<option value="3">Entre 10 e 20km</option>
-					<option value="4">Entre 20 e 30km</option>
-					<option value="5">Mais do que 30km</option>
-				</select>
+				<input type="number" id="distance">
 			</div>
 		</div>
 		<div style="position: fixed; top: 50vh; left: 2%; text-align: right;">
@@ -268,6 +178,6 @@
 	</div>
 	<div id="result" class="container row" style="text-align: center; display: none; margin: auto;">
 		<h1>Sua pegada de carbono é:</h1>
+		<h2 id="answer"></h2>
 	</div>
-	
 </body>
