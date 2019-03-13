@@ -64,10 +64,8 @@ function calculate(){
 
 	electricity += LqueroseneCO2(20/4 * plane, dryer, people);
 
-	electricity = Math.round(electricity/10) / 100;
-
 	console.log(electricity);
-	document.getElementById("answer").innerHTML = electricity + " kgCO2 por semana";
+	document.getElementById("answer").innerHTML = electricity + " gCO2 por semana";
 
 }
 
